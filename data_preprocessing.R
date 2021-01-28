@@ -121,7 +121,7 @@ df <- df %>%
 
 # For analysing them together
 df_extended <- df %>%
-    gather(key = "diff_type", value="diff_value", c("pred_2_prior_abs", "pred_2_fb_abs"))
+    gather(key = "reference", value="pred_error", c("pred_2_prior_abs", "pred_2_fb_abs"))
 
 # Export csv
 readr::write_csv(df, 'df.csv')
